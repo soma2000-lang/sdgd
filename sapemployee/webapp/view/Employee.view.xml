@@ -1,0 +1,9 @@
+<mvc:View
+	controllerName="sapemployee.controller.Employee"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<Input id="ProductInput"
+		binding="{/ProductCollection}"
+		value="{ProductName}"
+		tooltip="The name of the company is '{ProductName}'"/>
+</mvc:View>

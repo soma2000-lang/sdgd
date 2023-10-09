@@ -1,0 +1,8 @@
+{
+    "employees": [
+      { "name": "John Doe", "grade": "A", "info": "Employee A information" },
+      { "name": "Jane Smith", "grade": "B", "info": "Employee B information" },
+      { "name": "Bob Johnson", "grade": "C", "info": "Employee C information" }
+    ]
+  }
+  

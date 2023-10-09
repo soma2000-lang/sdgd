@@ -1,0 +1,18 @@
+<mvc:View controllerName="your.app.namespace.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <VBox>
+    <Table items="{/items}">
+      <!-- Define your table columns and bindings here -->
+    </Table>
+    <VBox id="buttonLayout">
+      <Button text="Draft" press="onDraftPress" />
+      <Button text="Save" press="onSavePress" visible="false" />
+      <Button text="Cancel" press="onCancelPress" visible="false" />
+    </VBox>
+  </VBox>
+</mvc:View>
+
+    </Page>
+</mvc:View>

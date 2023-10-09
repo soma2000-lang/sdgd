@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="sapemployee.controller.Employee"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout"
+	xmlns="sap.m">
+	<layout:VerticalLayout id="vLayout"
+		binding="{/company}"
+		width="100%">
+			<Text text="{ProductId}" />
+			<Text text="{ProductName}" />
+	</layout:VerticalLayout> 
+</mvc:View>

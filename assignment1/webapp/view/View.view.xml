@@ -1,0 +1,52 @@
+<mvc:View controllerName="assignment1.controller.View"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+    
+
+        <!-- <Button 
+            text="Go to Next Page"
+            press="onPress"
+            />
+
+        <core:Icon
+			src="sap-icon://accept"
+			class="size1"
+			color="#031E48"
+            visible="{/showIcon}"
+            />
+			
+
+        <Button 
+            text="Go to N"
+            press="onHidePress"
+            /> -->
+        <Table id="idProductsTable"
+		items="{
+			path: 'products>/ProductCollection'
+		}">
+		<columns>
+			<Column
+				width="12em">
+				<Text text="Product" />
+			</Column>
+			<Column
+				minScreenWidth="Tablet"
+				demandPopin="true">
+				<Text text="Product Name" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle" press="onItemPress" type="Navigation">
+				<cells>
+				<ObjectIdentifier
+						title="{products>ProductId}"/>
+					<Text
+						text="{products>ProductName}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+    </Page>
+</mvc:View>

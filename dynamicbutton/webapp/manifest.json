@@ -1,0 +1,143 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "dynamicbutton",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.11.1",
+      "toolsId": "0804ec2a-81e2-4df2-a57e-29e214c56a9b"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.118.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "dynamicbutton.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "dynamicbutton.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "Routemyview",
+          "pattern": ":?query:",
+          "target": [
+            "Targetmyview"
+          ]
+        }
+      ],
+      "targets": {
+        "Targetmyview": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "myview",
+          "viewName": "myview"
+        }
+      },
+      "secondpage": {
+        "viewId": "secondpage",
+        "viewName": "secondpage",
+        "viewLevel": 2
+      }
+    },
+    "rootView": {
+      "viewName": "dynamicbutton.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
+//"routing": {
+  "config": {
+    "routerClass": "sap.m.routing.Router",
+    "viewType": "XML",
+    "viewPath": "your.app.namespace.view",
+    "controlId": "app",
+    "controlAggregation": "pages",
+    "transition": "slide",
+  },
+  "routes": [
+    {
+      "pattern": "",
+      "name": "home",
+      "target": "home"
+    },
+    {
+      "pattern": "details/{id}",
+      "name": "details",
+      "target": "details"
+    }
+  ],
+  "targets": {
+    "home": {
+      "viewName": "Home",
+      "viewLevel": 1
+    },
+    "details": {
+      "viewName": "Details",
+      "viewLevel": 2
+    }
+  }
+}
+// 
