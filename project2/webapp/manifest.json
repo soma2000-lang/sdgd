@@ -1,7 +1,7 @@
 {
   "_version": "1.49.0",
   "sap.app": {
-    "id": "assignment1",
+    "id": "project2",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.11.1",
-      "toolsId": "0c1c5904-30ce-4df1-9abe-e18eca2357b1"
+      "toolsId": "f5aaa74a-25c5-4ee0-a0b7-48f2ea1c9ad7"
     }
   },
   "sap.ui": {
@@ -55,13 +55,9 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "assignment1.i18n.i18n"
+          "bundleName": "project2.i18n.i18n"
         }
       }
-    },
-    "products": {
-      "type": "sap.ui.model.json.JSONModel",
-      "uri":"model/products.json"
     },
     "resources": {
       "css": [
@@ -75,42 +71,32 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "assignment1.view",
+        "viewPath": "project2.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
       },
       "routes": [
         {
-          "name": "RouteView",
-          "pattern": "",
+          "name": "RouteView1",
+          "pattern": ":?query:",
           "target": [
-            "TargetView"
+            "TargetView1"
           ]
-        },
-        {
-          "name": "secondview",
-          "pattern": "productId/{productId}",
-          "target": "secondview"
         }
       ],
       "targets": {
-        "TargetView": {
+        "TargetView1": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View",
-          "viewName": "View"
-      },
-      "secondview": {
-        "viewId": "secondview",
-        "viewName": "secondview",
-        "viewLevel": 2
-      }
+          "viewId": "View1",
+          "viewName": "View1"
+        }
       }
     },
     "rootView": {
-      "viewName": "assignment1.view.App",
+      "viewName": "project2.view.App",
       "type": "XML",
       "async": true,
       "id": "App"
