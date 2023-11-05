@@ -1,0 +1,6 @@
+### Request-2 Create entry in MediaFiles
+#==================================================================#
+# @name postMediaEntry
+POST {{protocol}}://{{host}}/media/MediaFiles
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
